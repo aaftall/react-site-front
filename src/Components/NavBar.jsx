@@ -17,7 +17,7 @@ function NavBar() {
           <Link to="/tasks">Tasks</Link>
         </li>
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <Link to="https://buy.stripe.com/14kaFH2hWcmzd6E144">Pricing</Link>
         </li>
       </ul>
 
