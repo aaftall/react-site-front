@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 0 2 2 2 rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.logo {
+  height: 3em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1em rgb(226, 206, 176));
+}
+
+main {
+  max-width: 90%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-desc {
+  color: #888;
+}
+
+.separator {
+  height: 200px;
+}
+
+button {
+  margin-bottom: 30px;
+}
+
+.newTask {
+  color: white;
+}
+
+.table {
+  border-radius: 5px;
+  /* border: 1px beige solid; */
+  max-width: 90%;
+  background-color: rgb(46, 46, 46);
+  padding: 1rem;
+}
+
+.tableContainer {
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+td {
+  border-bottom: 1px rgb(8, 8, 8) solid;
+}
+
+.tableTitle {
+  max-width: 500px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tableDD {
+  max-width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tablePriority {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tableDone {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

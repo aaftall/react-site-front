@@ -1,0 +1,67 @@
+.tasks-container {
+  background-color: rgb(40, 40, 40);
+  padding: 30px;
+  min-width: 500px;
+  min-height: 200px;
+  margin: 100px;
+  border-radius: ;
+}
+
+.taskClass {
+  display: flex;
+  flex-direction: column;
+}
+
+.taskTitle {
+  text-align: left;
+  padding-bottom: 20px;
+  margin: 5px;
+}
+
+.taskDueDate {
+  background-color: grey;
+  width: 30%;
+  min-width: 100px;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .tasks-container {
+    background-color: rgb(40, 40, 40);
+    padding: 30px;
+    width: 300px;
+  }
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskSpec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskDescription {
+  padding: 30px;
+  background-color: lightgray;
+  border-radius: 8px;
+  color: black;
+  font-weight: initial;
+  text-align: left;
+}
+
+.taskDone {
+  margin-right: 10px;
+  background-color: green;
+}
+
+.taskPriority {
+  background-color: rgb(223, 206, 176);
+  padding: 5px;
+  color: black;
+  border-radius: 8px;
+}
