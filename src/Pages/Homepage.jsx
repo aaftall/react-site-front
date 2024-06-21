@@ -1,7 +1,7 @@
 import TasksCompact from "../Components/TasksCompact";
 import FullWidthTextField from "../Components/Button";
 import { useState } from "react";
-import Create from "../Components/CreateTaskButton";
+// import Create from "../Components/CreateTaskButton";
 
 function Homepage() {
   const [count, setCount] = useState(0);
@@ -12,9 +12,7 @@ function Homepage() {
         <button onClick={() => setCount((count) => count + 1)}>
           {count} tasks to complete
         </button>
-        <div>
-          <Create />
-        </div>
+        <div>{/* <Create /> */}</div>
         <FullWidthTextField />
         <p className="action-desc">
           Write the title of your new task and press ENTER

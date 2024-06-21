@@ -50,48 +50,39 @@ function CreateTask() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form className="createForm" onSubmit={handleSubmit}>
+      <div className="item">
         <label htmlFor="title">Title: </label>
-        <input type="text" id="title" value={title} onChange={handleTitle} />
+        <div className="item">
+          <input type="text" id="title" value={title} onChange={handleTitle} />
+        </div>
       </div>
-      <div>
+      <div className="item">
         <label htmlFor="description">Description: </label>
-        <textarea
-          name=""
-          id="description"
-          value={description}
-          onChange={handleDescription}
-          rows={5}
-        ></textarea>
+        <div className="item">
+          <textarea
+            name=""
+            id="description"
+            value={description}
+            onChange={handleDescription}
+            rows={5}
+          ></textarea>
+        </div>
       </div>
-      <div>
-        <label htmlFor="priority">tags:</label>
-        <select
-          name=""
-          id="priority"
-          value={priority}
-          onChange={handlePriority}
-        >
+      <div className="item">
+        <label htmlFor="tags">Tags:</label>
+        <select name="" id="priority" value={tags} onChange={handleTags}>
           <option disabled value="-1">
-            Please select a priority
+            Please select a tag
           </option>
-          <option value="important">Urgent</option>
-          <option value="moderate">Moderate priority</option>
-          <option value="low">Easy peasy</option>
+          <option value="operations">Operations</option>
+          <option value="finance">Finance</option>
+          <option value="tech">Tech</option>
         </select>
         {/* <BasicSelect name="" id="tags" value={tags} onChange={handleTags} /> */}
       </div>
-      {/* <div>
-        <label htmlFor="tags">Tags: </label>
-        <textarea
-          name=""
-          id="tags"
-          value={tags}
-          onChange={handleTags}
-        ></textarea>
-      </div> */}
-      <div>
+
+      <div className="item">
         <label htmlFor="dueDate">Due date: </label>
         <input
           type="date"
@@ -101,27 +92,27 @@ function CreateTask() {
           onChange={handleDueDate}
         ></input>
       </div>
-      <div>
+      <div className="item">
         <div>
-          <label htmlFor="urgent">Urgent: </label>
+          <label htmlFor="Urgent">Urgent: </label>
           <input
             type="radio"
             name="priority"
-            id="urgent"
-            value={"urgent"}
-            checked={tags === "urgent"}
-            onChange={handleTags}
+            id="Urgent"
+            value={"Urgent"}
+            checked={priority === "Urgent"}
+            onChange={handlePriority}
           />
         </div>
         <div>
-          <label htmlFor="medium">Medium:</label>
+          <label htmlFor="Medium">Medium:</label>
           <input
             type="radio"
             name="priority"
-            id="medium"
-            value={"medium"}
-            checked={tags === "medium"}
-            onChange={handleTags}
+            id="Medium"
+            value={"Medium"}
+            checked={priority === "Medium"}
+            onChange={handlePriority}
           />
         </div>
         <div>
@@ -129,10 +120,10 @@ function CreateTask() {
           <input
             type="radio"
             name="priority"
-            id="low"
-            value={"low"}
-            checked={tags === "low"}
-            onChange={handleTags}
+            id="Low"
+            value={"Low"}
+            checked={priority === "Low"}
+            onChange={handlePriority}
           />
         </div>
         {/* <ButtonGroup
@@ -148,7 +139,7 @@ function CreateTask() {
           <Button>Priority 3</Button>
         </ButtonGroup> */}
       </div>
-      <button>Create Project</button>
+      <button>Create Task</button>
     </form>
   );
 }
