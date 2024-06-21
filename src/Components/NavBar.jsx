@@ -11,6 +11,9 @@ function NavBar() {
       </div>
       <ul className="tabs">
         <li>
+          <Link to="/tasks/create">Create</Link>
+        </li>
+        <li>
           <Link to="/tasks">Tasks</Link>
         </li>
         <li>
