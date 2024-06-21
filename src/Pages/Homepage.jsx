@@ -4,12 +4,12 @@ import { useState } from "react";
 // import Create from "../Components/CreateTaskButton";
 
 function Homepage() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(3);
   return (
     <div>
       <div className="separator"></div>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount(() => 3 + 1)}>
           {count} tasks to complete
         </button>
         <div>{/* <Create /> */}</div>
